@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database setting -->
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/salelaptop</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">1905</property>
+        <!-- Cấu hình dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <!-- Cấu hình show SQL -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Cấu hình cập nhật tự động -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping class = "Beans.DonHang"/>
+        <mapping class = "Beans.DonHangChiTiet"/>
+        <mapping class = "Beans.HoaDon"/>
+        <mapping class = "Beans.HoaDonChiTiet"/>
+        <mapping class = "Beans.Image"/>
+        <mapping class = "Beans.Kho"/>
+        <mapping class = "Beans.KhuyenMai"/>
+        <mapping class = "Beans.Person"/>
+        <mapping class = "Beans.Account"/>
+        <mapping class = "Beans.Person_KhachHang"/>
+        <mapping class = "Beans.Person_NhaCungCap"/>
+        <mapping class = "Beans.Person_NhanVien"/>
+        <mapping class = "Beans.Phieu"/>
+        <mapping class = "Beans.PhieuChiTiet"/>
+        <mapping class = "Beans.PhieuNhap"/>
+        <mapping class = "Beans.PhieuXuat"/>
+        <mapping class = "Beans.SanPham"/>
+
+    </session-factory>
+</hibernate-configuration>
+
+
